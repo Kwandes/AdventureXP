@@ -1,0 +1,16 @@
+/* Styling code shared across all screens  */
+
+body, html {
+    background-color: white;
+    color: black;
+    margin: 0;
+}
+
+a { /* Remove hyper-link decoration */
+    color: black;
+    text-decoration: none;
+}
+
+:focus { /* remove an outline on focusing of an element */
+    outline: none;
+}
