@@ -22,4 +22,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
       env:
-        TREECREATE_JDBC_URL: ${{ secrets.FALCON_JDBC_URL }}
+        FALCON_JDBC_URL: ${{ secrets.FALCON_JDBC_URL }}
