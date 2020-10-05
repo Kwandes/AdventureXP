@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: flex-start;
 
+    background-image: url('../img/activities-pictures/background.png');
 }
 
 #title-container {
