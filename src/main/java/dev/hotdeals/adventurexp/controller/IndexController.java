@@ -1,8 +1,17 @@
 package dev.hotdeals.adventurexp.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import java.util.List;
+
+import dev.hotdeals.adventurexp.model.Activity;
+
 
 @Controller
 public class IndexController {
@@ -11,4 +20,8 @@ public class IndexController {
     public String index() {
         return "redirect:/activities";
     }
+    
+
+    
+    
 }
