@@ -9,14 +9,12 @@
 <body>
 <div id="page-container">
     <div id="title-container">
-        <div id="title">
-            <h1>Extreme Adventure</h1>
-        </div>
+        <img th:src="@{../img/activities-pictures/logo.png}" class="title-image"/>
     </div>
     <div id="content-container">
         <div id="content">
         <div th:each="activity: ${activities}">
-            <div class="activity">
+            <div class="activity activity-hover">
                 <img th:src="@{../img/activities-pictures/gokartActivityLogo.png}" id="gocart">
                 <div class="activity-field" th:text="${activity.name}"></div>
                 <div class="activity-field" th:text="${activity.description}"></div>
