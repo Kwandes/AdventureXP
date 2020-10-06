@@ -8,41 +8,52 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.springframework.lang.NonNull;
 
 @Entity
 @Table(name = "activities")
 public class Activity {
 	
 	@Id
+	@NonNull
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
 	private int id;
 	
+	@NonNull
 	@Column(name="name")
 	private String name;
 	
+	@NonNull
 	@Column(name="description")
 	private String description;
 	
+	@NonNull
 	@Column(name="price")
 	private double price;
 	
+	@NonNull
 	@Column(name="group_size")
 	private String groupSize;
 	
 	//Google says java.sql.Timestamp corresponds to SQL DATETIME
+	@NonNull
 	@Column(name="duration")
 	private int duration;
 	
+	@NonNull
 	@Column(name="start_time")
 	private String startTime;
 	
+	@NonNull
 	@Column(name="age_restriction")
 	private int ageRestriction;
 	
+	@NonNull
 	@Column(name="height_restriction")
 	private int heightRestrictionCm;
 	
+	@NonNull
 	@Column(name="full_description")
 	private String fullDescription;
 

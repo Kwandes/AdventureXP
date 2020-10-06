@@ -1,6 +1,7 @@
 package dev.hotdeals.adventurexp.controller;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import com.example.demo.repository.TutorialRepository;
 
 import dev.hotdeals.adventurexp.model.Activity;
 import dev.hotdeals.adventurexp.repository.ActivityRepository;
@@ -34,7 +33,7 @@ public class ActivitiesController {
     	try {
     		List<Activity> activities = new ArrayList<>();
     		activities.addAll(activityRepository.findAll());
-    		return new ResponseEntity<>(activities, HttpStatus.OK));
+    		return new ResponseEntity<>(activities, HttpStatus.OK);
 		} catch (Exception e) {
 		//In the event of an issue grabbing data return this error
 			return new ResponseEntity<>(HttpStatus.I_AM_A_TEAPOT);
