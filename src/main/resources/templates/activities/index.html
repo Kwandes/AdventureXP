@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <title>Activities</title>
     <link th:href="@{/styles/index.css}" rel="stylesheet">
+    <link th:href="@{/styles/activities.css}" rel="stylesheet">
 </head>
 <body>
-<p>We are activities</p>
+<div id="page-container">
+    <div id="title-container">
+        <div id="title">
+            <h1>Extreme Adventure</h1>
+        </div>
+    </div>
+    <div id="content-container">
+        <div id="content">
+        <div th:each="activity: ${activities}">
+            <div class="activity">
+                <img th:src="@{../img/activities-pictures/gokartActivityLogo.png}" id="gocart">
+                <div class="activity-field" th:text="${activity.name}"></div>
+                <div class="activity-field" th:text="${activity.description}"></div>
+                <div class="activity-field" th:text="${activity.price}"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
