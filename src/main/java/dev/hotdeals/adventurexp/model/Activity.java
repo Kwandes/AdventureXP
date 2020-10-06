@@ -13,7 +13,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 
 @Entity
-@Table(name = "activities", schema = "testing")
+@Table(name = "activities")
 public class Activity {
 	
 	@Id
