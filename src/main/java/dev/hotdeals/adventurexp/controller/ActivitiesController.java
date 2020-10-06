@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import dev.hotdeals.adventurexp.model.Activity;
@@ -20,8 +22,10 @@ public class ActivitiesController {
 	ActivityRepository activityRepository;
 	
     @RequestMapping(value = "/activities", method = {RequestMethod.GET, RequestMethod.POST})
-    public String activities() {
-        return "activities/index";
+    public String activities(Model model) {
+    	List<Activity> activities = activityRepository.findAll();
+        model.addAttribute("activities", activities);
+    	return "activities/index";
     }
     
     @GetMapping("/getActivities")
