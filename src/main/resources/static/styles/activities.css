@@ -4,11 +4,13 @@
     justify-content: flex-start;
 
     background-image: url('../img/activities-pictures/background.png');
+    width: 100%;
+    height: min-content;
 }
 
 #title-container {
     height: 20vh;
-    width: 100vh;
+    width: 100%;
 
     display: flex;
     flex-direction: row;
@@ -16,14 +18,15 @@
 }
 
 #content-container {
-    width: 100vw;
+    width: 80vw;
+    margin: 0 10vw;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 #content {
     width: 80vw;
-    margin: 5vh 0;
+    margin-bottom: 5vh;
 
     display: flex;
     flex-direction: row;
@@ -33,7 +36,8 @@
 }
 
 .activity {
-    height: 20vh;
+    min-height: 20vh;
+    height: fit-content;
     min-width: 20vw;
     max-width: 20vw;
     margin: 1vh 2.5vw;
@@ -42,7 +46,8 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
+    padding-bottom: 1vh;
 }
 
 .activity-field {
@@ -55,5 +60,4 @@
 #gocart {
     width: 100%;
     height: auto;
-
 }
