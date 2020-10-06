@@ -42,8 +42,13 @@ public class ActivitiesController {
 			return new ResponseEntity<>(HttpStatus.I_AM_A_TEAPOT);
 		}
     }
-    
-    
+
+
+    //NEW CODE FOR ACTIVITY DETAILS HTML
+    @GetMapping("/activityDetails")
+	public String activityDetails(){
+    	return "activities/activityDetails";
+	}
     
     
     //TODO - Show activities -> List of Activities (obj)

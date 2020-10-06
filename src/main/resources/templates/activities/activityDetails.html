@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Activity details</title>
+    <link th:href="@{/styles/index.css}" rel="stylesheet">
+    <link th:href="@{/styles/activityDetails.css}" rel="stylesheet">
+</head>
+<body>
+<div id="page-container">
+    <div id="header-container">
+        <img th:src="@{../img/activities-pictures/gokartActivityLogo.png}" id="header-image">
+    </div>
+    <div id="content-container">
+        <div id="essentials-container">
+            <div id="activity-name">Name: Go-Kart</div>
+            <div id="activity-price">Price: 300DKK</div>
+        </div>
+        <div id="extra-container">
+            <div id="activity-full-description">This is go-karting. Here comes the full description...</div>
+            <div id="activity-information-container">
+                <div id="activity-group-size">Group size: 1-100</div>
+                <div id="activity-duration">Duration: 30 minutes</div>
+                <div id="activity-start-time">Start time: Mondays from 0-0</div>
+                <div id="activity-age-restriction">Age restriction: > 10 years old</div>
+                <div id="activity-height-restriction">Height restriction: > 150 cm</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
