@@ -14,11 +14,12 @@
 
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    margin: 5vh 0 0 7vw;
 }
 
 .title-image{
-    width: 50%;
+    width: 30%;
     height: auto;
 }
 
@@ -30,6 +31,8 @@
     align-items: center;
 }
 #content {
+    margin-top: 10vh;
+    padding: 5vh 0 5vh 0;
     width: 80vw;
     margin-bottom: 5vh;
 
@@ -38,6 +41,7 @@
     align-content: space-around;
     flex-wrap: wrap;
     background: #E7BD73;
+    box-shadow: 1px 1px 13px 17px rgba(231,189,115,1);
 }
 
 .activity {
@@ -63,13 +67,17 @@
 
 .activity-hover:hover {
     background: #50A8D3;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .activity-field {
     width: 95%;
     display: flex;
     align-content: space-around;
+}
+
+.activity-name {
+    font-size: 1.8rem;
 }
 
 #gocart {
