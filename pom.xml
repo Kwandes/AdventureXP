@@ -21,7 +21,19 @@
     </properties>
 
     <dependencies>
-
+    
+    	<!--  testing testing one two three -->
+    	<dependency>
+        	<groupId>org.hibernate</groupId>
+        	<artifactId>hibernate-validator</artifactId>
+        	<version>6.0.13.Final</version>
+    	</dependency>
+    	<dependency>
+        	<groupId>org.glassfish</groupId>
+       		<artifactId>javax.el</artifactId>
+        	<version>3.0.0</version>
+     	</dependency>
+		
         <!-- MySQL database connection -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -64,6 +76,10 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+        	<groupId>org.hibernate</groupId>
+        	<artifactId>hibernate-core</artifactId>
         </dependency>
     </dependencies>
 
