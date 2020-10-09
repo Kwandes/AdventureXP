@@ -85,3 +85,24 @@
     width: 100%;
     height: auto;
 }
+
+.btn {
+    text-decoration: none;
+    margin: 15px 0px;
+    background-color: #50A8D3;
+    padding: 10px;
+    border: none;
+    box-shadow: 10px 10px 5px #30231A;
+}
+
+.button-area {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    min-height: 20vh;
+    min-width: 20vw;
+    max-width: 20vw;
+
+}
