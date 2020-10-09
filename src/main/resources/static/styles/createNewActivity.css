@@ -1,0 +1,29 @@
+#page-container {
+    background-color: #30231A;
+    width: 100%;
+    height: min-content;
+}
+
+h1 {
+    color: #50a8d3;
+    margin: 7vw;
+    font-size: 4vw;
+}
+
+#form-id {
+    padding: 3vw 3vw 3vw 12vw;
+    background: #e7bd73;
+    width: 70vw;
+    margin: 7vw;
+}
+
+form > label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.title-image{
+    width: 30%;
+    height: auto;
+    margin-left: 7vw;
+}

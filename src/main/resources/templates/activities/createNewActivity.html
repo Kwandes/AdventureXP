@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>createNewActivity</title>
+    <link th:href="@{/styles/createNewActivity.css}" rel="stylesheet">
+</head>
+<body id="page-container">
+<!--    <img th:src="@{../img/activities-pictures/logo.png}" class="title-image"/>-->
+
+    <div><h1>Create New Activity:</h1></div>
+
+    <form id="form-id">
+        <label for="name">Activity Name: <input type="text" id="name" required></label>
+
+        <label for="short-desc">Short Description: <input type="text" id="short-desc" required></label>
+
+        <label for="price">Price: <input type="number" step="0.01" id="price" required></label>
+
+        <label for="group-size">Group Size: <input type="number" id="group-size" required></label>
+
+        <label for="start-time">Start Time: <input type="text" id="start-time" required></label>
+
+        <label for="duration">Duration (minutes): <input type="number" id="duration" required></label>
+
+        <label for="age-restriction">Age Restriction: <input type="number" id="age-restriction" required></label>
+
+        <label for="height-restriction">Height Restriction (centimeters): <input type="number" id="height-restriction" required></label>
+
+        <label for="full-desc">Full Description: <input type="text" id="full-desc" required></label>
+
+        <input type="submit" value="Submit" id="submit">
+    </form>
+</body>
+</html>

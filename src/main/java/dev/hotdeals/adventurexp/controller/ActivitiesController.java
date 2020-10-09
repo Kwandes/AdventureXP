@@ -49,6 +49,11 @@ public class ActivitiesController {
 	public String activityDetails(){
     	return "activities/activityDetails";
 	}
+
+	@GetMapping("/createNewActivity")
+    	public String createNewActivity() {
+    		return "activities/createNewActivity";
+    	}
     
     
     //TODO - Show activities -> List of Activities (obj)
