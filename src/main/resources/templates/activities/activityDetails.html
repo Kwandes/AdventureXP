@@ -2,29 +2,45 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Activity details</title>
+    <title>Activities</title>
     <link th:href="@{/styles/index.css}" rel="stylesheet">
+    <link th:href="@{/styles/activities.css}" rel="stylesheet">
     <link th:href="@{/styles/activityDetails.css}" rel="stylesheet">
 </head>
 <body>
 <div id="page-container">
-    <div id="header-container">
-        <img th:src="@{../img/activities-pictures/gokartActivityDetailsLogo.jpg}" id="header-image">
+    <div id="title-container">
+        <img th:src="@{../img/activities-pictures/logo.png}" class="title-image"/>
     </div>
-    <div id="content-container">
+    <div id="content-container" class="content-style">
+        <img th:src="@{../img/activities-pictures/gokartActivityDetailsLogo.jpg}" class="header-image">
         <div id="essentials-container">
-            <div id="activity-name" th:text="${activity.name}"></div>
-            <div id="activity-price" th:text="${activity.price}"></div>
+                <div id="activity-name" th:text="${activity.name}"></div>
+            <span> - </span>
+                <div id="activity-price" th:text="${activity.price}"></div>
         </div>
-        <div id="extra-container">
-            <div id="activity-full-description" th:text="${activity.fullDescription}">
-            </div>
-            <div id="activity-information-container">
-                <div id="activity-group-size" th:text="${activity.groupSize}"></div>
-                <div id="activity-duration" th:text="${activity.duration}"></div>
-                <div id="activity-start-time" th:text="${activity.startTime}"></div>
-                <div id="activity-age-restriction" th:text="${activity.ageRestriction}"></div>
-                <div id="activity-height-restriction" th:text="${activity.heightRestrictionCm}"></div>
+
+        <div class="activity-details-container content-background">
+            <div id="extra-container">
+                <span>DESCRIPTION:</span>
+                <div id="activity-full-description" th:text="${activity.fullDescription}"></div>
+                <div id="activity-information-container">
+                    <span>GROUP SIZE:</span>
+                    <div id="activity-group-size" th:text="${activity.groupSize}"></div>
+                    <br>
+                    <span>DURATION:</span>
+                    <div id="activity-duration" th:text="${activity.duration}"></div>
+                    <br>
+                    <span>START TIME:</span>
+                    <div id="activity-start-time" th:text="${activity.startTime}"></div>
+                    <br>
+                    <span>AGE RESTRICTION:</span>
+                    <div id="activity-age-restriction" th:text="${activity.ageRestriction}"></div>
+                    <br>
+                    <span>HEIGHT RESTRICTION:</span>
+                    <div id="activity-height-restriction" th:text="${activity.heightRestrictionCm}"></div>
+                    <br>
+                </div>
             </div>
         </div>
     </div>

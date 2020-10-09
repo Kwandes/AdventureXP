@@ -14,3 +14,29 @@ a { /* Remove hyper-link decoration */
 :focus { /* remove an outline on focusing of an element */
     outline: none;
 }
+
+#page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #30231A;
+    width: 100%;
+    height: min-content;
+    align-items: center;
+}
+
+#title-container {
+    height: 20vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5vh 0 0 0;
+}
+
+.content-background{
+    background: #E7BD73;
+    box-shadow: 1px 1px 13px 17px rgba(231,189,115,1);
+}

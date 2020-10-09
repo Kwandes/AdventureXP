@@ -12,7 +12,7 @@
         <img th:src="@{../img/activities-pictures/logo.png}" class="title-image"/>
     </div>
     <div id="content-container">
-        <div id="content">
+        <div id="content" class="content-background" style="margin-top: 10vh;">
         <div th:each="activity: ${activities}">
             <a th:href="@{'/activity/'+${activity.id}}">
             <div class="activity activity-hover">
