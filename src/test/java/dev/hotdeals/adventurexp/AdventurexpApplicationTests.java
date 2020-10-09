@@ -4,7 +4,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,12 +36,23 @@ class AdventurexpApplicationTests {
     }
 
     @Test
-    void findByIdTest1() {
+    void findByIdTest() {
 
-        //Get the activity from DB
+        //Get the activity from DB by id
         Activity testActivity = activityRepository.findById(1).get();
 
         //Make sure the id is 1
         assertThat(testActivity.getId()).isEqualTo(1);
     }
+
+    @Test
+    void findByAgeRestrictionTest() {
+        //Get activity from DB by age restriction
+        List<Activity> activityList = activityRepository.findAllByAgeRestriction(10);
+
+        //Make sure the age restriction is 10 and there are 3 activities
+        assertThat(activityList.size()).isEqualTo(3);
+        assertThat(activityList.get(2).getAgeRestriction()).isEqualTo(10);
+    }
+
 }
