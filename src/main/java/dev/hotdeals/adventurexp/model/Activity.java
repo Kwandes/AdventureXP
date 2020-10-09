@@ -23,11 +23,11 @@ public class Activity {
 	private int id;
 	
 	@NotNull
-	@Column(name="name")
+	@Column(name="name", length= 45)
 	private String name;
 	
 	@NotNull
-	@Column(name="description")
+	@Column(name="description",  length = 512)
 	private String description;
 	
 	@NotNull
@@ -35,7 +35,7 @@ public class Activity {
 	private double price;
 	
 	@NotNull
-	@Column(name="group_size")
+	@Column(name="group_size", length = 45)
 	private String groupSize;
 	
 	//Google says java.sql.Timestamp corresponds to SQL DATETIME
@@ -56,7 +56,7 @@ public class Activity {
 	private int heightRestrictionCm;
 	
 	@NotNull
-	@Column(name="full_description")
+	@Column(name="full_description", length = 512)
 	private String fullDescription;
 
 
