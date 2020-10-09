@@ -2,28 +2,65 @@
     background-color: #30231A;
     width: 100%;
     height: min-content;
+    font-family: "Times New Roman", Times, serif;
+    color: #2f2f2f;
+}
+
+#logo-container {
+    text-align: center;
+    padding-top: 7vh;
+}
+
+.title-image{
+    width: 30%;
+    height: auto;
+    alignment: center;
 }
 
 h1 {
     color: #50a8d3;
-    margin: 7vw;
+    margin: 3vw 0 5vw 5vw;
     font-size: 4vw;
 }
 
 #form-id {
     padding: 3vw 3vw 3vw 12vw;
     background: #e7bd73;
-    width: 70vw;
-    margin: 7vw;
+    margin: 4vw;
+    box-shadow: 1px 1px 13px 17px rgba(231,189,115,1);
 }
 
 form > label {
     display: block;
     margin-bottom: 10px;
+    font-size: 1.8vw;
+    opacity: .7;
+    transition: opacity .3s;
 }
 
-.title-image{
-    width: 30%;
-    height: auto;
-    margin-left: 7vw;
+label:hover {
+    opacity: 1;
 }
+
+input, textarea {
+    padding: 1.5vh;
+    border-radius: 5px;
+    font-size: 1.5vw;
+}
+
+#submit {
+    background: #50a8d3;
+    border: 2px solid black;
+    opacity: .7;
+    transition: opacity .3s;
+    cursor: pointer;
+}
+#submit:hover {
+    opacity: 1;
+}
+
+#submit:active {
+    background: #1d7dcb;
+}
+
+
