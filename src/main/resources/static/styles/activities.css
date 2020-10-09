@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: flex-start;
 
-    background-image: url('../img/activities-pictures/background.png');
+    background-color: #30231A;
     width: 100%;
     height: min-content;
 }
@@ -15,6 +15,13 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    margin: 5vh 0 0 0;
+}
+
+.title-image{
+    width: 30%;
+    height: auto;
+    margin-left: 7vw;
 }
 
 #content-container {
@@ -25,6 +32,8 @@
     align-items: center;
 }
 #content {
+    margin-top: 10vh;
+    padding: 5vh 0 5vh 0;
     width: 80vw;
     margin-bottom: 5vh;
 
@@ -32,7 +41,8 @@
     flex-direction: row;
     align-content: space-around;
     flex-wrap: wrap;
-    background: aquamarine;
+    background: #E7BD73;
+    box-shadow: 1px 1px 13px 17px rgba(231,189,115,1);
 }
 
 .activity {
@@ -41,20 +51,34 @@
     min-width: 20vw;
     max-width: 20vw;
     margin: 1vh 2.5vw;
-    background: bisque;
+    background-color: #50A8D3;
 
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
     padding-bottom: 1vh;
+
+    box-shadow: 10px 10px 5px #30231A;
+}
+
+.activity-hover {
+    background: #50A8D3;
+}
+
+.activity-hover:hover {
+    background: #50A8D3;
+    opacity: 0.8;
 }
 
 .activity-field {
-    background: brown;
     width: 95%;
     display: flex;
     align-content: space-around;
+}
+
+.activity-name {
+    font-size: 1.8rem;
 }
 
 #gocart {
