@@ -2,12 +2,16 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
+    background: aquamarine;
     width: 100%;
     height: min-content;
+
 }
 
 #header-image {
     width: 100%;
+    margin:0 5vw;
 }
 
 #header-container {
@@ -33,6 +37,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background: aqua;
 }
 
 #extra-container {
@@ -45,4 +50,10 @@
 
 #activity-information-container {
     margin-top: 100px;
+    background: aqua;
+}
+
+#activity-full-description {
+    width: 100%;
+    background: aqua;
 }
