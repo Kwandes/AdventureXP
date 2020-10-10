@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 #page-container {
     background-color: #30231A;
     width: 100%;
@@ -18,24 +22,28 @@
 }
 
 h1 {
-    color: #50a8d3;
-    margin: 3vw 0 5vw 5vw;
+    display: inline-block;
     font-size: 4vw;
+
+    background: linear-gradient(#1d7dcb, rgba(231,189,115,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 3vw 0 5vh 10vw;
 }
 
 #form-id {
     padding: 3vw 3vw 3vw 12vw;
     background: #e7bd73;
-    margin: 4vw;
+    margin: 0 10vw 10vw 10vw;
     box-shadow: 1px 1px 13px 17px rgba(231,189,115,1);
 }
 
 form > label {
     display: block;
-    margin-bottom: 10px;
     font-size: 1.8vw;
     opacity: .7;
     transition: opacity .3s;
+    margin: 1vh;
 }
 
 label:hover {
@@ -46,21 +54,47 @@ input, textarea {
     padding: 1.5vh;
     border-radius: 5px;
     font-size: 1.5vw;
+    margin: 1vh;
 }
 
-#submit {
-    background: #50a8d3;
+#submit, #cancel {
     border: 2px solid black;
     opacity: .7;
     transition: opacity .3s;
+    font-size: 4vh;
+    margin: 1vw;
+    border-radius: 10px;
+    padding: 1vh;
     cursor: pointer;
 }
+
+#submit {
+    font-size: 6vh;
+    background: #50a8d3;
+}
+
 #submit:hover {
     opacity: 1;
 }
 
 #submit:active {
     background: #1d7dcb;
+}
+
+#cancel {
+    background: #e8e8e8;
+}
+
+#cancel:hover {
+    opacity: 1;
+}
+
+#cancel:active {
+    background: #c4c4c4;
+}
+
+sup {
+    color: #e30101;
 }
 
 
