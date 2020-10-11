@@ -27,10 +27,10 @@ class AdventurexpApplicationTests {
     	//Create a list for Activities
     	List<Activity> activities = new ArrayList<>();
     	
-    	//add everything that findAll gets from DB to activites List
+    	//add everything that findAll gets from DB to activities List
 		activities.addAll(activityRepository.findAll());
 		
-		//make sure that activites is excatly 5 entries long
+		//make sure that activities is exactly 5 entries long
 		assertThat(activities.size()).isEqualTo(5);
 		//assertEquals(5, activities.size());
     }
