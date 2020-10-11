@@ -1,15 +1,18 @@
 package dev.hotdeals.adventurexp.model;
-
+import java.util.*;
 import javax.persistence.Column;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.GenericGenerator;
+
 
 
 @Entity
@@ -58,8 +61,12 @@ public class Activity {
 	@NotNull
 	@Column(name="full_description", length = 512)
 	private String fullDescription;
-
-
+/*
+	@OneToMany TODO- fix this its wrong
+	@JoinColumn(name="activity_id", referencedColumnName = "id" )
+	private List<ActivitySchedule> activitySchedule;
+	
+*/	
 	
 	public Activity(String name, String description, double price, String groupSize, int duration, String startTime,
 			int ageRestriction, int heightRestrictionCm, String fullDescription) {

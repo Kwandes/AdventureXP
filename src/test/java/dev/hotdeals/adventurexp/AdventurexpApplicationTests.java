@@ -10,13 +10,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import dev.hotdeals.adventurexp.model.Activity;
+import dev.hotdeals.adventurexp.model.ActivitySchedule;
 import dev.hotdeals.adventurexp.repository.ActivityRepository;
+import dev.hotdeals.adventurexp.repository.ActivityScheduleRepository;
 
 @SpringBootTest
 class AdventurexpApplicationTests {
 
 	@Autowired
 	ActivityRepository activityRepository;
+	@Autowired
+	ActivityScheduleRepository activityScheduleRepository;
 	
     @Test
     void contextLoads() {
@@ -53,6 +57,15 @@ class AdventurexpApplicationTests {
         //Make sure the age restriction is 10 and there are 3 activities
         assertThat(activityList.size()).isEqualTo(3);
         assertThat(activityList.get(2).getAgeRestriction()).isEqualTo(10);
+        assertThat(activityList.getClass().isMemberClass());
+        
+    }
+    
+    @Test
+    void checkThatActivityScheduleExists()
+    {
+    	ActivitySchedule testActivitySchedule = activityScheduleRepository.findById(1).get();
+    	assertThat(testActivitySchedule.getId()).isEqualTo(1);
     }
 
 }

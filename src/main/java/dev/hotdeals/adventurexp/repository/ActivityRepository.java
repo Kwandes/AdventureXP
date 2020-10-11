@@ -2,9 +2,9 @@ package dev.hotdeals.adventurexp.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
+
 import dev.hotdeals.adventurexp.model.Activity;
 
-import java.time.Duration;
 import java.util.List;
 
 
