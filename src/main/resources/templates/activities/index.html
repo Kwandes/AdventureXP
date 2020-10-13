@@ -12,15 +12,22 @@
         <img th:src="@{../img/activities-pictures/logo.png}" class="title-image"/>
     </div>
     <div id="content-container">
-        <div id="content">
+        <div id="content" class="content-background" style="margin-top: 10vh;">
         <div th:each="activity: ${activities}">
+            <a th:href="@{'/activity/'+${activity.id}}">
             <div class="activity activity-hover">
                 <img th:src="@{../img/activities-pictures/gokartActivityLogo.png}" id="gocart">
                 <div class="activity-name" th:text="${activity.name}"></div>
                 <div class="activity-field" th:text="${activity.description}"></div>
                 <div class="activity-field" th:text="${activity.price}"></div>
             </div>
+            </a>
         </div>
+            <div class="button-area">
+            <a href="/createNewActivity" id="createNewActivity">
+                <button class="btn">Create new activity</button>
+            </a>
+            </div>
         </div>
     </div>
 </div>

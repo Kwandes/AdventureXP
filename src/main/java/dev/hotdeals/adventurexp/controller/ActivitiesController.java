@@ -9,10 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import dev.hotdeals.adventurexp.model.Activity;
 import dev.hotdeals.adventurexp.repository.ActivityRepository;
 
@@ -45,12 +42,14 @@ public class ActivitiesController {
 
 
     //NEW CODE FOR ACTIVITY DETAILS HTML
-    @GetMapping("/activityDetails")
-	public String activityDetails(){
-    	return "activities/activityDetails";
+    @GetMapping("/activity/{id}")
+	public String activityDetails(@PathVariable("id") int id, Model model){
+    	Activity activity = activityRepository.findById(id).get();
+		model.addAttribute("activity", activity);
+		return "activities/activityDetails";
 	}
 
-	@GetMapping("/createNewActivity")
+	  @GetMapping("/createNewActivity")
     	public String createNewActivity() {
     		return "activities/createNewActivity";
     	}
