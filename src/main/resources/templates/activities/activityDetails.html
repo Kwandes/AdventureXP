@@ -2,44 +2,45 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Activity details</title>
+    <title>Activities</title>
     <link th:href="@{/styles/index.css}" rel="stylesheet">
+    <link th:href="@{/styles/activities.css}" rel="stylesheet">
     <link th:href="@{/styles/activityDetails.css}" rel="stylesheet">
 </head>
 <body>
 <div id="page-container">
-    <div id="header-container">
-        <img th:src="@{../img/activities-pictures/gokartActivityDetailsLogo.jpg}" id="header-image">
+    <div id="title-container">
+        <img th:src="@{../img/activities-pictures/logo.png}" class="title-image"/>
     </div>
-    <div id="content-container">
+    <div id="content-container" class="content-style">
+        <img th:src="@{../img/activities-pictures/gokartActivityDetailsLogo.jpg}" class="header-image">
         <div id="essentials-container">
-            <div id="activity-name">Name: Go-Kart</div>
-            <div id="activity-price">Price: 300DKK</div>
+                <div id="activity-name" th:text="${activity.name}"></div>
+            <span> - </span>
+                <div id="activity-price" th:text="${activity.price}"></div>
         </div>
-        <div id="extra-container">
-            <div id="activity-full-description">
-                Welcome to the go-kart details page! Here we will tell you everything you need to know about
-                go-karting at Adventure-XP! It is a very extreme and adrenaline-full activity which requires
-                some former experience in any type of driving (not a pre-requisite but would be recommended)!
-                We offer the best go-karts, such as the ones Mario, Luigi and other "Mario-Kart" characters
-                used!! Don't be afraid to try and see how good of a driver you are! Try out our go-karts and see
-                which one suits you best! We wish you the best of luck...
-            </div>
-            <div id="activity-information-container"> PRACTICAL INFO:
-                <div id="activity-group-size"><br> Group size: 1-100 people</div>
-                <br>
-                <div id="activity-duration">Duration: 30 minutes</div>
-                <br>
-                <div id="activity-start-time">
-                    Start time: <br>
-                    Mondays from 13-20 <br>
-                    Wednesdays from 16-20 <br>
-                    Saturday and Sunday from 12-18
+
+        <div class="activity-details-container content-background">
+            <div id="extra-container">
+                <span>DESCRIPTION:</span>
+                <div id="activity-full-description" th:text="${activity.fullDescription}"></div>
+                <div id="activity-information-container">
+                    <span>GROUP SIZE:</span>
+                    <div id="activity-group-size" th:text="${activity.groupSize}"></div>
+                    <br>
+                    <span>DURATION:</span>
+                    <div id="activity-duration" th:text="${activity.duration}"></div>
+                    <br>
+                    <span>START TIME:</span>
+                    <div id="activity-start-time" th:text="${activity.startTime}"></div>
+                    <br>
+                    <span>AGE RESTRICTION:</span>
+                    <div id="activity-age-restriction" th:text="${activity.ageRestriction}"></div>
+                    <br>
+                    <span>HEIGHT RESTRICTION:</span>
+                    <div id="activity-height-restriction" th:text="${activity.heightRestrictionCm}"></div>
+                    <br>
                 </div>
-                <br>
-                <div id="activity-age-restriction">Age restriction: > 10 years old</div>
-                <br>
-                <div id="activity-height-restriction">Height restriction: > 150 cm</div>
             </div>
         </div>
     </div>
