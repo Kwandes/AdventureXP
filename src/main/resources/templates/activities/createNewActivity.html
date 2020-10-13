@@ -13,45 +13,45 @@
 
     <div><h1>Create New Activity</h1></div>
 
-    <form id="form-id">
+    <form th:action="@{/createNewActivity}" method="post" id="form-id" th:object="${activity}" modelAttribute="activity">
         <label for="name">Activity Name<sup>*</sup> <br>
-            <input type="text" id="name" placeholder="eg: golf.." required>
+            <input type="text" id="name" placeholder="eg: golf.." required name="name" th:value="*{name}">
         </label>
 
         <label for="short-desc">Short Description<sup>*</sup> <br>
-            <input type="text" id="short-desc" required>
+            <input type="text" id="short-desc" required name="description" th:value="*{description}">
         </label>
 
         <label for="price">Price<sup>*</sup> <br>
-            <input type="number" step="0.01" id="price" required>
+            <input type="number" step="0.01" id="price" required name="price" th:value="*{price}">
         </label>
 
         <label for="group-size">Group Size<sup>*</sup> <br>
-            <input type="number" id="group-size" required>
+            <input type="text" id="group-size" required name="groupSize" th:value="*{groupSize}">
         </label>
 
         <label for="start-time">Start Time<sup>*</sup> <br>
-            <input type="text" id="start-time" required>
+            <input type="text" id="start-time" required name="startTime" th:value="*{startTime}">
         </label>
 
         <label for="duration">Duration (minutes)<sup>*</sup> <br>
-            <input type="number" id="duration" required>
+            <input type="number" id="duration" required name="duration" th:value="*{duration}">
         </label>
 
         <label for="age-restriction">Age Restriction<sup>*</sup> <br>
-            <input type="number" id="age-restriction" required>
+            <input type="number" id="age-restriction" required name="ageRestriction" th:value="*{ageRestriction}">
         </label>
 
         <label for="height-restriction">Height Restriction (centimeters)<sup>*</sup> <br>
-            <input type="number" id="height-restriction" required>
+            <input type="number" id="height-restriction" required name="heightRestrictionCm" th:value="*{heightRestrictionCm}">
         </label>
 
         <label for="full-desc">Full Description<sup>*</sup> <br>
-            <textarea type="text" id="full-desc" required rows="4" cols="50"></textarea>
+            <textarea type="text" id="full-desc" required rows="4" cols="50" name="fullDescription" th:value="*{fullDescription}"></textarea>
         </label>
 
         <label>URL Main Page Picture
-            <input type="text" name="m  ainPicture">
+            <input type="text" name="mainPicture">
         </label>
 
         <label>URL Detail Page Picture
@@ -60,7 +60,7 @@
 
 
         <button type="button"  id="cancel">Cancel</button>
-        <button type="button"  id="submit">Save</button>
+        <input type="submit" id="submit" name="save" value="Save">
     </form>
 </body>
 </html>

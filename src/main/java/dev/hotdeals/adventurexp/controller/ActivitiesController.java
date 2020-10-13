@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import dev.hotdeals.adventurexp.model.Activity;
 import dev.hotdeals.adventurexp.repository.ActivityRepository;
+import org.springframework.web.context.request.WebRequest;
 
 @Controller
 public class ActivitiesController {
@@ -49,10 +50,18 @@ public class ActivitiesController {
 		return "activities/activityDetails";
 	}
 
-	  @GetMapping("/createNewActivity")
-    	public String createNewActivity() {
-    		return "activities/createNewActivity";
-    	}
+	@GetMapping("/createNewActivity")
+	public String createNewActivity(Model model) {
+    	model.addAttribute("activity", new Activity());
+    	return "activities/createNewActivity";
+    }
+
+	@PostMapping("/createNewActivity")
+	public String createNewActivity(@ModelAttribute Activity activity){
+    	int id = activityRepository.save(activity).getId();
+    	return "redirect:/activity/" + id;
+	}
+
     
     
     //TODO - Show activities -> List of Activities (obj)
