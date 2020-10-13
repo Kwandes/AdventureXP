@@ -14,6 +14,8 @@ import dev.hotdeals.adventurexp.model.Activity;
 import dev.hotdeals.adventurexp.repository.ActivityRepository;
 import org.springframework.web.context.request.WebRequest;
 
+import javax.websocket.server.PathParam;
+
 @Controller
 public class ActivitiesController {
 
@@ -55,16 +57,18 @@ public class ActivitiesController {
 		return "activities/createNewActivity";
 	}
    
-    
-	@PostMapping("/deleteActitiy") 
-	public String deleteActivity(WebRequest request)
+	
+
+	@GetMapping("/deleteActivity/{id}")
+	public String deleteActivity( WebRequest request, @PathVariable String id)
 	{
 		try {
+
 			//set the int id to the correct ID
-			int id = Integer.parseInt(request.getParameter("id"));
+			int idInt = Integer.parseInt(id);
 			//get the required object to delete
-			Activity activityToDelete = activityRepository.findById(id).get();
-			activityRepository.deleteById(id);
+			Activity activityToDelete = activityRepository.findById(idInt).get();
+			activityRepository.deleteById(idInt);
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
 			return "/ShitsFuckedYo";
