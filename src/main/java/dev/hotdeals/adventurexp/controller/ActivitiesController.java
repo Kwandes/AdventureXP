@@ -49,12 +49,25 @@ public class ActivitiesController {
 		return "activities/activityDetails";
 	}
 
-	  @GetMapping("/createNewActivity")
-    	public String createNewActivity() {
+	@GetMapping("/createNewActivity")
+		public String createNewActivity() {
     		return "activities/createNewActivity";
     	}
     
-    
+    @GetMapping("/updateActivity/{id}")
+	public String updateActivity(@PathVariable int id, Model model){
+    	Activity activity = activityRepository.findById(id).get();
+    	model.addAttribute("activity", activity);
+		model.addAttribute("isUpdate", true);
+    	return "activities/createNewActivity";
+	}
+
+	@PostMapping("/updateActivity")
+	public String updateActivity(@ModelAttribute Activity activity){
+    	activityRepository.save(activity);
+    	return "redirect:/activity/"+activity.getId();
+	}
+
     //TODO - Show activities -> List of Activities (obj)
     
     //TODO - Redirect from selected activity to Details page of it.
