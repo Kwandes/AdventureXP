@@ -3,7 +3,7 @@
     These tests require the main app to be running before they can be run. Therefore, they are excluded from normal testing runs.
     In order to run them, you must use `mvn -Dtest=dev.hotdeals.adventurexp.functional_tests.** test`
  */
-
+/*
 package dev.hotdeals.adventurexp.functional_tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -86,3 +86,4 @@ public class ActivityListTests {
         }
     }
 }
+*/
