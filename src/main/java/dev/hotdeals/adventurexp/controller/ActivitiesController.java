@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import dev.hotdeals.adventurexp.model.Activity;
 import dev.hotdeals.adventurexp.repository.ActivityRepository;
+import org.springframework.web.context.request.WebRequest;
 
 @Controller
 public class ActivitiesController {
