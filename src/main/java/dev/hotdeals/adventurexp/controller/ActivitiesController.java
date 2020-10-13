@@ -49,11 +49,28 @@ public class ActivitiesController {
 		return "activities/activityDetails";
 	}
 
-	  @GetMapping("/createNewActivity")
-    	public String createNewActivity() {
-    		return "activities/createNewActivity";
-    	}
+    @GetMapping("/createNewActivity")
+	public String createNewActivity() {
+		return "activities/createNewActivity";
+	}
+   
     
+	@PostMapping("/deleteActitiy") 
+	public String deleteActivity(WebRequest request)
+	{
+		try {
+			//set the int id to the correct ID
+			int id = Integer.parseInt(request.getParameter("id"));
+			//get the required object to delete
+			Activity activityToDelete = activityRepository.findById(id).get();
+			activityRepository.deleteById(id);
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+			return "/ShitsFuckedYo";
+		}
+
+		return "redirect:/index";
+	}
     
     //TODO - Show activities -> List of Activities (obj)
     
@@ -61,5 +78,5 @@ public class ActivitiesController {
     
     //TODO - Login button redirect
 
-    //TODO - CRUD Activity (admin only)
+    //TODO - CRUD Activity< (admin only)
 }
