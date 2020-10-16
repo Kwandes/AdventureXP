@@ -14,7 +14,8 @@
     <div th:hidden="${isUpdate}"><h1>Create New Activity</h1></div>
     <div th:hidden="${isUpdate}? false : true"><h1>Update Activity</h1></div>
 
-    <form th:action="@{/createNewActivity}" method="post" id="form-id" th:object="${activity}" modelAttribute="activity">
+    <form th:action="${isUpdate} ? @{/updateActivity} : @{/createNewActivity}" method="post" id="form-id" th:object="${activity}" modelAttribute="activity">
+        <input type="hidden" name="id" th:value="*{id}">
         <label for="name">Activity Name<sup>*</sup> <br>
             <input type="text" id="name" placeholder="eg: golf.." required name="name" th:value="*{name}">
         </label>
