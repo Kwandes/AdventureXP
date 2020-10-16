@@ -11,7 +11,8 @@
         <img th:src="@{../img/activities-pictures/logo.png}" class="title-image"/>
     </div>
 
-    <div><h1>Create New Activity</h1></div>
+    <div th:hidden="${isUpdate}"><h1>Create New Activity</h1></div>
+    <div th:hidden="${isUpdate}? false : true"><h1>Update Activity</h1></div>
 
     <form th:action="@{/createNewActivity}" method="post" id="form-id" th:object="${activity}" modelAttribute="activity">
         <label for="name">Activity Name<sup>*</sup> <br>

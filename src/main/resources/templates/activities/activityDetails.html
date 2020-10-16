@@ -6,6 +6,7 @@
     <link th:href="@{/styles/index.css}" rel="stylesheet">
     <link th:href="@{/styles/activities.css}" rel="stylesheet">
     <link th:href="@{/styles/activityDetails.css}" rel="stylesheet">
+    <link th:href="@{/styles/createNewActivity.css}" rel="stylesheet">
 </head>
 <body>
 <div id="page-container">
@@ -40,6 +41,7 @@
                     <span>HEIGHT RESTRICTION:</span>
                     <div id="activity-height-restriction" th:text="${activity.heightRestrictionCm}"></div>
                     <br>
+                    <a th:href="@{'/updateActivity/' + ${activity.id}}" class="button positive-button">Update Activity</a>
                 </div>
             </div>
         </div>
