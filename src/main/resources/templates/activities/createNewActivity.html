@@ -52,11 +52,11 @@
         </label>
 
         <label>URL Main Page Picture
-            <input type="text" name="mainPicture">
+            <input type="text" name="imgLink1" th:value="*{imgLink1}">
         </label>
 
         <label>URL Detail Page Picture
-            <input type="text" name="detailPicture">
+            <input type="text" name="imgLink2" th:value="*{imgLink2}">
         </label>
 
         <a th:href="@{/index}"><button type="button" id="cancel">Cancel</button></a>
