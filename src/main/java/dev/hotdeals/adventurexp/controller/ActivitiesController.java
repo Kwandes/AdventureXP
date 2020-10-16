@@ -73,7 +73,6 @@ public class ActivitiesController {
 			int idInt = Integer.parseInt(id);
 			//get the required object to delete
 			activityRepository.deleteById(idInt);
-			Activity activityToDelete = activityRepository.findById(idInt).get();
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
 			return "/ShitsFuckedYo";
