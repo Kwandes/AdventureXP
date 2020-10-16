@@ -16,7 +16,7 @@
         <div th:each="activity: ${activities}">
             <a th:href="@{'/activity/'+${activity.id}}">
             <div class="activity activity-hover">
-                <img th:src="@{../img/activities-pictures/gokartActivityLogo.png}" id="gocart">
+                <img th:src="${activity.imgLink1}" id="gocart">
                 <div class="activity-name" th:text="${activity.name}"></div>
                 <div class="activity-field" th:text="${activity.description}"></div>
                 <div class="activity-field" th:text="${activity.price}"></div>

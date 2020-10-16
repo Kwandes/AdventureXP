@@ -61,6 +61,14 @@ public class Activity {
 	@NotNull
 	@Column(name="full_description", length = 512)
 	private String fullDescription;
+
+	@NotNull
+	@Column(name="img_link1", columnDefinition = "varchar(255) default 'https://www.howtogeek.com/wp-content/uploads/2018/05/2018-06-03-1.png'")
+	private String imgLink1;
+
+	@NotNull
+	@Column(name="img_link2", columnDefinition = "varchar(255) default 'https://www.howtogeek.com/wp-content/uploads/2018/05/2018-06-03-1.png'")
+	private String imgLink2;
 /*
 	@OneToMany TODO- fix this its wrong
 	@JoinColumn(name="activity_id", referencedColumnName = "id" )
@@ -182,9 +190,22 @@ public class Activity {
 		return id;
 	}
 
-	
-	
-	
+	public String getImgLink1() {
+		return imgLink1;
+	}
+
+	public void setImgLink1(String imgLink1) {
+		this.imgLink1 = imgLink1;
+	}
+
+	public String getImgLink2() {
+		return imgLink2;
+	}
+
+	public void setImgLink2(String imgLink2) {
+		this.imgLink2 = imgLink2;
+	}
+
 	//endregion
 	
 	
