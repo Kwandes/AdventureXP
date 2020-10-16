@@ -14,7 +14,7 @@
         <img th:src="@{../img/activities-pictures/logo.png}" class="title-image"/>
     </div>
     <div id="content-container" class="content-style">
-        <img th:src="@{../img/activities-pictures/gokartActivityDetailsLogo.jpg}" class="header-image">
+        <img th:src="${activity.imgLink2}" class="header-image">
         <div id="essentials-container">
                 <div id="activity-name" th:text="${activity.name}"></div>
             <span> - </span>
