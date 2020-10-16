@@ -14,7 +14,8 @@
     <div th:hidden="${isUpdate}"><h1>Create New Activity</h1></div>
     <div th:hidden="${isUpdate}? false : true"><h1>Update Activity</h1></div>
 
-    <form th:action="@{/createNewActivity}" method="post" id="form-id" th:object="${activity}" modelAttribute="activity">
+    <form th:action="${isUpdate} ? @{/updateActivity} : @{/createNewActivity}" method="post" id="form-id" th:object="${activity}" modelAttribute="activity">
+        <input type="hidden" name="id" th:value="*{id}">
         <label for="name">Activity Name<sup>*</sup> <br>
             <input type="text" id="name" placeholder="eg: golf.." required name="name" th:value="*{name}">
         </label>
@@ -48,15 +49,15 @@
         </label>
 
         <label for="full-desc">Full Description<sup>*</sup> <br>
-            <textarea type="text" id="full-desc" required rows="4" cols="50" name="fullDescription" th:value="*{fullDescription}"></textarea>
+            <textarea type="text" id="full-desc" required rows="4" cols="50" name="fullDescription" th:field="*{fullDescription}"></textarea>
         </label>
 
         <label>URL Main Page Picture
-            <input type="text" name="mainPicture">
+            <input type="text" name="imgLink1" th:value="*{imgLink1}">
         </label>
 
         <label>URL Detail Page Picture
-            <input type="text" name="detailPicture">
+            <input type="text" name="imgLink2" th:value="*{imgLink2}">
         </label>
 
         <a th:href="@{/index}"><button type="button" id="cancel">Cancel</button></a>
