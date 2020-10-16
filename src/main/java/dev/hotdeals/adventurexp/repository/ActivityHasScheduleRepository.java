@@ -8,4 +8,4 @@ import dev.hotdeals.adventurexp.model.ActivityHasSchedule;
 public interface ActivityHasScheduleRepository extends JpaRepository<ActivityHasSchedule, Integer>{
 
 }
-/*
+*/
