@@ -52,12 +52,17 @@ public class ActivitiesController {
 		return "activities/activityDetails";
 	}
 
-    @GetMapping("/createNewActivity")
-	public String createNewActivity() {
-		return "activities/createNewActivity";
+	@GetMapping("/createNewActivity")
+	public String createNewActivity(Model model) {
+    	model.addAttribute("activity", new Activity());
+    	return "activities/createNewActivity";
+    }
+
+	@PostMapping("/createNewActivity")
+	public String createNewActivity(@ModelAttribute Activity activity){
+    	int id = activityRepository.save(activity).getId();
+    	return "redirect:/activity/" + id;
 	}
-   
-	
 
 	@GetMapping("/deleteActivity/{id}")
 	public String deleteActivity( WebRequest request, @PathVariable String id)
@@ -67,8 +72,8 @@ public class ActivitiesController {
 			//set the int id to the correct ID
 			int idInt = Integer.parseInt(id);
 			//get the required object to delete
-			Activity activityToDelete = activityRepository.findById(idInt).get();
 			activityRepository.deleteById(idInt);
+			Activity activityToDelete = activityRepository.findById(idInt).get();
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
 			return "/ShitsFuckedYo";
@@ -77,6 +82,20 @@ public class ActivitiesController {
 		return "redirect:/index";
 	}
     
+    @GetMapping("/updateActivity/{id}")
+	public String updateActivity(@PathVariable int id, Model model){
+    	Activity activity = activityRepository.findById(id).get();
+    	model.addAttribute("activity", activity);
+		model.addAttribute("isUpdate", true);
+    	return "activities/createNewActivity";
+	}
+
+	@PostMapping("/updateActivity")
+	public String updateActivity(@ModelAttribute Activity activity){
+    	activityRepository.save(activity);
+    	return "redirect:/activity/"+activity.getId();
+	}
+
     //TODO - Show activities -> List of Activities (obj)
     
     //TODO - Redirect from selected activity to Details page of it.
