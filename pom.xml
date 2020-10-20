@@ -10,7 +10,7 @@
     </parent>
     <groupId>dev.hotdeals</groupId>
     <artifactId>adventurexp</artifactId>
-    <version>0.3.0</version>
+    <version>1.0.0</version>
     <name>adventurexp</name>
     <description>Springboot webapp developed using agile methodologies as part of a uni project</description>
 
