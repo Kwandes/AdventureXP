@@ -44,12 +44,12 @@
                 </div>
             </div>
             <div class="button-area" style="align-items: flex-start">
-                <a th:href="@{'/deleteActivity/' + ${activity.id}}" method="get" id="deleteActivity">
+                <a th:if="${isLoggedIn == true}" th:href="@{'/deleteActivity/' + ${activity.id}}" method="get" id="deleteActivity">
                     <button class="button" onclick="return confirm('Are you sure you want to delete this activity?')">
                         Delete Activity
                     </button>
                 </a>
-                <a th:href="@{'/updateActivity/' + ${activity.id}}" method="get">
+                <a th:if="${isLoggedIn == true}" th:href="@{'/updateActivity/' + ${activity.id}}" method="get">
                     <button class="button positive-button">Update Activity</button>
                 </a>
                 <a href="/index" id="back">

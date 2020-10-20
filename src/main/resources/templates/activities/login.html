@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link th:href="@{/styles/index.css}" rel="stylesheet">
+    <link th:href="@{/styles/activities.css}" rel="stylesheet">
+</head>
+<body>
+<div id="page-container" style="min-height: 100vh">
+    <div id="title-container">
+        <img th:src="@{../img/activities-pictures/logo.png}" class="title-image"/>
+    </div>
+    <div id="content-container" style="position: relative">
+        <div id="content" class="content-background" style="margin-top: 10vh; height: fit-content">
+            <form action="/submitLogin" method="post"
+                  style="display: flex; flex-direction: column; justify-content: space-evenly; align-items: center">
+                <label for="loginUsername">
+                    Username:
+                    <input type="text" name="loginUsername" id="loginUsername" class="loginInput" placeholder="user"
+                           required style="margin-bottom: 10px">
+                </label>
+                <label for="loginPassword">
+                    Password:
+                    <input type="text" name="loginPassword" id="loginPassword" class="loginInput" placeholder="pass"
+                           required style="margin-left: 3px">
+                </label>
+                <button class="button positive-button" style="width: 80%" type="submit">login</button>
+                <a href="/index" id="back">
+                    <button class="button positive-button">Back</button>
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
