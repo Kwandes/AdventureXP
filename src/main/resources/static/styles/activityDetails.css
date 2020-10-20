@@ -39,3 +39,11 @@
     align-items: center;
     margin-bottom: 50px;
 }
+
+#activity-price {
+    margin: 0 10px 0 10px;
+}
+
+#activity-name {
+    margin-right: 10px;
+}

@@ -63,11 +63,11 @@ public class Activity {
 	private String fullDescription;
 
 	@NotNull
-	@Column(name="img_link1", columnDefinition = "varchar(255) default 'https://www.howtogeek.com/wp-content/uploads/2018/05/2018-06-03-1.png'")
+	@Column(name="img_link1", columnDefinition = "varchar(255)")
 	private String imgLink1;
 
 	@NotNull
-	@Column(name="img_link2", columnDefinition = "varchar(255) default 'https://www.howtogeek.com/wp-content/uploads/2018/05/2018-06-03-1.png'")
+	@Column(name="img_link2", columnDefinition = "varchar(255)")
 	private String imgLink2;
 /*
 	@OneToMany TODO- fix this its wrong
@@ -199,7 +199,11 @@ public class Activity {
 	}
 
 	public void setImgLink1(String imgLink1) {
-		this.imgLink1 = imgLink1;
+		if(!imgLink1.equals("")){
+			this.imgLink1 = imgLink1;
+		} else {
+			this.imgLink1 = "https://www.howtogeek.com/wp-content/uploads/2018/05/2018-06-03-1.png";
+		}
 	}
 
 	public String getImgLink2() {
@@ -207,7 +211,11 @@ public class Activity {
 	}
 
 	public void setImgLink2(String imgLink2) {
-		this.imgLink2 = imgLink2;
+		if(!imgLink2.equals("")){
+			this.imgLink2 = imgLink2;
+		} else {
+			this.imgLink2 = "https://www.howtogeek.com/wp-content/uploads/2018/05/2018-06-03-1.png";
+		}
 	}
 
 }
