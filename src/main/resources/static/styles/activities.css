@@ -1,5 +1,5 @@
 .title-image{
-    width: 30%;
+    width: 25%;
     height: auto;
     margin-left: 7vw;
 }
@@ -26,8 +26,9 @@
     height: fit-content;
     min-width: 18vw;
     max-width: 18vw;
-    margin: 1vh 2.5vw;
     background-color: #50A8D3;
+    margin: 5vh;
+    opacity: .9;
 
     display: flex;
     justify-content: flex-start;
@@ -35,26 +36,30 @@
     align-items: center;
     padding-bottom: 1vh;
 
-    box-shadow: 10px 10px 5px #30231A;
+    box-shadow: 10px 10px 5px #666;
 }
 
-.activity-hover {
-    background: #50A8D3;
+.activity:active, .btn:active {
+    background-color: #1d7dcb;
+    box-shadow: 6px 6px 5px #424242;
+    transform: translate(4px, 4px);
 }
 
-.activity-hover:hover {
-    background: #50A8D3;
-    opacity: 0.8;
+.activity:hover, .btn:hover {
+    background: #1d7dcb;
+    opacity: 1;
 }
 
 .activity-field {
     width: 95%;
     display: flex;
     align-content: space-around;
+    margin: 1vh;
 }
 
 .activity-name {
     font-size: 1.8rem;
+    margin: 1vh;
 }
 
 #gocart {
@@ -68,7 +73,9 @@
     background-color: #50A8D3;
     padding: 10px;
     border: none;
-    box-shadow: 10px 10px 5px #30231A;
+    box-shadow: 10px 10px 5px #666;
+    opacity: .9;
+    cursor: pointer;
 }
 
 .button-area {
