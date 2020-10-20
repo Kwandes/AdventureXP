@@ -9,7 +9,7 @@
 <body>
 <div id="page-container">
     <div id="title-container">
-        <img th:src="@{../img/activities-pictures/logo.png}" class="title-image"/>
+        <img th:src="@{../img/activities-pictures/logo.png}"  class="title-image"/>
     </div>
     <div id="content-container" style="position: relative">
 
@@ -27,11 +27,11 @@
         <div id="content" class="content-background" style="margin-top: 10vh;">
         <div th:each="activity: ${activities}">
             <a th:href="@{'/activity/'+${activity.id}}">
-            <div class="activity activity-hover">
+            <div class="activity">
                 <img th:src="${activity.imgLink1}" id="gocart">
                 <div class="activity-name" th:text="${activity.name}"></div>
                 <div class="activity-field" th:text="${activity.description}"></div>
-                <div class="activity-field" th:text="${activity.price}"></div>
+                <div class="activity-field" th:text="${activity.price}"> <span>DKK</span></div>
             </div>
             </a>
         </div>

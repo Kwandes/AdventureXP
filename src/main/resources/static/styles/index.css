@@ -4,6 +4,7 @@ body, html {
     background-color: white;
     color: black;
     margin: 0;
+
 }
 
 a { /* Remove hyper-link decoration */
@@ -39,6 +40,7 @@ a { /* Remove hyper-link decoration */
 .content-background{
     background: #E7BD73;
     box-shadow: 1px 1px 13px 17px rgba(231,189,115,1);
+    margin-top: 10vh;
 }
 
 .button{
@@ -50,6 +52,21 @@ a { /* Remove hyper-link decoration */
     border-radius: 10px;
     padding: 4px;
     cursor: pointer;
+    box-shadow: 0 9px #999;
+}
+
+.button:hover {
+    opacity: 1;
+}
+
+.button:active {
+    background-color: #1d7dcb;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#deleteActivity .button:active {
+    background: #dc0000;
 }
 
 .positive-button{
